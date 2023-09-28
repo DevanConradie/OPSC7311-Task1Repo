@@ -1,3 +1,4 @@
+package com.example.opsc7311_task1
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.opsc7311_task1.databinding.ItemCategoryBinding  // Import the correct binding class

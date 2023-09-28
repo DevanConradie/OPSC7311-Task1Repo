@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.opsc7311_task1.Category
 import com.example.opsc7311_task1.CategoryDetailActivity
 
+
 class  CategoryAdapter(private var categories: List<Category>) :
     RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 

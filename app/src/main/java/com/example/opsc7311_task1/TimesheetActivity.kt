@@ -1,6 +1,7 @@
 package com.example.opsc7311_task1
 
 import android.os.Bundle
+import android.content.Intent
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,9 +48,12 @@ class TimesheetActivity : AppCompatActivity() {
 
         // Set click listener for the "View Entries" button
         viewEntriesButton.setOnClickListener {
-            // Add your code here to navigate to the view entries screen or perform any desired action.
-            // For example, you can start a new activity or fragment here.
-            // If you want to navigate to CategoryDetailActivity, you can do so using an Intent.
+            // Create an Intent to navigate to the desired activity
+            val intent = Intent(this, CategoryDetailActivity::class.java)
+
+            // Start the new activity
+            startActivity(intent)
         }
+
     }
 }
