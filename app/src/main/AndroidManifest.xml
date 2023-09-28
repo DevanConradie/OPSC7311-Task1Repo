@@ -29,6 +29,12 @@
             <!-- Intent filter and other activity configuration if needed -->
         </activity>
 
+        <!-- TimesheetActivity -->
+        <activity
+            android:name=".TimesheetActivity">
+            <!-- Intent filter and other activity configuration if needed -->
+        </activity>
+
     </application>
 
 </manifest>
