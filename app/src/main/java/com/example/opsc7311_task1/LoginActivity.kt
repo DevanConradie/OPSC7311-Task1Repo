@@ -1,5 +1,6 @@
 package com.example.opsc7311_task1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,7 +28,9 @@ class LoginActivity : AppCompatActivity() {
             val enteredPassword = passwordEditText.text.toString()
 
             if (enteredUsername == validUsername && enteredPassword == validPassword) {
-                showToast("Login Successful")
+                // If login is successful, navigate to TimesheetActivity
+                val intent = Intent(this, TimesheetActivity::class.java)
+                startActivity(intent)
             } else {
                 showToast("Login Failed. Please check your credentials.")
             }
