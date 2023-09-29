@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.opsc7311_task1">
 
     <application
         android:allowBackup="true"
@@ -32,6 +33,12 @@
         <!-- TimesheetActivity -->
         <activity
             android:name=".TimesheetActivity">
+            <!-- Intent filter and other activity configuration if needed -->
+        </activity>
+
+        <!-- CategoryDetailActivity -->
+        <activity
+            android:name=".CategoryDetailActivity">
             <!-- Intent filter and other activity configuration if needed -->
         </activity>
 
