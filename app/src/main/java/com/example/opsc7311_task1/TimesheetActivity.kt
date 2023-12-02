@@ -1,6 +1,5 @@
 package com.example.opsc7311_task1
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,14 +8,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.opsc7311_task1.Category
 import com.example.opsc7311_task1.CategoryAdapter
+import com.example.opsc7311_task1.CategoryDetailActivity
 import com.example.opsc7311_task1.CategoryManager
 import com.example.opsc7311_task1.databinding.ActivityTimesheetBinding
+import com.google.firebase.Firebase
+import com.google.firebase.database.database
 
 class TimesheetActivity : AppCompatActivity() {
 
     private lateinit var categoryManager: CategoryManager
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var binding: ActivityTimesheetBinding
+
+    val database = Firebase.database
+    val myRef = database.getReference("message")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +44,19 @@ class TimesheetActivity : AppCompatActivity() {
         // Set click listener for adding a category
         addCategoryButton.setOnClickListener {
             val categoryName = binding.categoryNameEditText.text.toString()
-            val newCategory = Category(System.currentTimeMillis(), categoryName)
-            categoryManager.addCategory(newCategory)
-            categoryAdapter.updateCategories(categoryManager.getCategories())
+
+            // Check if the category name is not empty before updating the UI
+            if (categoryName.isNotEmpty()) {
+                // Write the category name to Realtime Database
+                myRef.setValue(categoryName)
+
+                // Update the local categories and refresh the UI
+                categoryManager.addCategory(Category(System.currentTimeMillis(), categoryName))
+                categoryAdapter.updateCategories(categoryManager.getCategories())
+
+                // Clear the EditText after adding the category
+                binding.categoryNameEditText.text.clear()
+            }
         }
 
         // Initialize the "View Entries" button
