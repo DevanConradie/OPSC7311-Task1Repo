@@ -16,14 +16,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        />
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/loginButton"
