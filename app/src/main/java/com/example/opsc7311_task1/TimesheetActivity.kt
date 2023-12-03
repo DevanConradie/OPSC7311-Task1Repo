@@ -1,18 +1,16 @@
+// TimesheetActivity.kt in com.example.opsc7311_task1 package
 package com.example.opsc7311_task1
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.opsc7311_task1.Category
-import com.example.opsc7311_task1.CategoryAdapter
-import com.example.opsc7311_task1.CategoryDetailActivity
-import com.example.opsc7311_task1.CategoryManager
 import com.example.opsc7311_task1.databinding.ActivityTimesheetBinding
-import com.google.firebase.Firebase
-import com.google.firebase.database.database
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class TimesheetActivity : AppCompatActivity() {
 
@@ -20,8 +18,9 @@ class TimesheetActivity : AppCompatActivity() {
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var binding: ActivityTimesheetBinding
 
-    val database = Firebase.database
-    val myRef = database.getReference("message")
+    // Get a reference to the Realtime Database
+    private val databaseReference: DatabaseReference =
+        FirebaseDatabase.getInstance().getReference("Category")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,13 +44,28 @@ class TimesheetActivity : AppCompatActivity() {
         addCategoryButton.setOnClickListener {
             val categoryName = binding.categoryNameEditText.text.toString()
 
+            // Log the category name (for debugging)
+            Log.d("TimesheetActivity", "CategoryName: $categoryName")
+
             // Check if the category name is not empty before updating the UI
             if (categoryName.isNotEmpty()) {
-                // Write the category name to Realtime Database
-                myRef.setValue(categoryName)
+                // Create a reference to a new child node with a unique key
+                val categoryReference = databaseReference.push()
+
+                // Write the category name to the generated key
+                categoryReference.setValue(categoryName)
+
+                // Log statement for debugging
+                Log.d("TimesheetActivity", "Category added to Firebase")
 
                 // Update the local categories and refresh the UI
-                categoryManager.addCategory(Category(System.currentTimeMillis(), categoryName))
+                categoryManager.addCategory(
+                    Category(
+                        System.currentTimeMillis(),
+                        categoryReference.key!!, // Use the unique key as the category ID
+                        categoryName
+                    )
+                )
                 categoryAdapter.updateCategories(categoryManager.getCategories())
 
                 // Clear the EditText after adding the category
