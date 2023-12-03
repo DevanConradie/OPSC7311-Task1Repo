@@ -20,6 +20,7 @@
         android:textStyle="bold"
         android:textColor="@android:color/white"/>
 
+
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
         android:textColorHint="@android:color/white"
         android:textStyle="bold"
         android:textColor="@android:color/white"/>
+
 
     <Button
         android:id="@+id/loginButton"
