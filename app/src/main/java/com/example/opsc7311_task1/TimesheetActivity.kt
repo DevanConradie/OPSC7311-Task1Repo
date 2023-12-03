@@ -83,5 +83,15 @@ class TimesheetActivity : AppCompatActivity() {
             // You can pass data to CategoryDetailActivity here if needed
             startActivity(intent)
         }
+
+        // Initialize the "To Do List" button
+        val toDoListButton: Button = binding.toDoListButton
+
+        // Set click listener for the "To Do List" button
+        toDoListButton.setOnClickListener {
+            // Create an intent to navigate to ChecklistActivity
+            val intent = Intent(this, ChecklistActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
