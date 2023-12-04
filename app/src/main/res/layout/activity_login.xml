@@ -11,6 +11,23 @@
     tools:context=".LoginActivity"
     android:background="@drawable/retrowave_grid">
 
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="8.png"
+        />
+    <TextView
+        android:id="@+id/loginHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
@@ -36,5 +53,5 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log In"/>
+        android:text="Log In" />
 </LinearLayout>
