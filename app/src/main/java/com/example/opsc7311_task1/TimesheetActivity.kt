@@ -1,7 +1,4 @@
-// TimesheetActivity.kt in com.example.opsc7311_task1 package
 package com.example.opsc7311_task1
-
-// TimesheetActivity.kt in com.example.opsc7311_task1 package
 
 import android.content.Intent
 import android.os.Bundle
@@ -103,6 +100,16 @@ class TimesheetActivity : AppCompatActivity() {
         statisticsButton.setOnClickListener {
             // Create an intent to navigate to StatisticsActivity
             val intent = Intent(this, Statistics::class.java)
+            startActivity(intent)
+        }
+
+        // Initialize the "Profile" button
+        val profileButton: Button = binding.profileButton
+
+        // Set click listener for the "Profile" button
+        profileButton.setOnClickListener {
+            // Create an intent to navigate to ProfileActivity
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
     }
