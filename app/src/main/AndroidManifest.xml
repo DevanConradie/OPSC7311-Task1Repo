@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.opsc7311_task1">
@@ -14,43 +15,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OPSC7311Task1"
         tools:targetApi="31">
-
-        <!-- ChecklistActivity -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Statistics"
+            android:exported="false" /> <!-- ChecklistActivity -->
         <activity
             android:name=".ChecklistActivity"
-            android:exported="false" />
-
-        <!-- MainActivity -->
+            android:exported="false" /> <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- LoginActivity -->
+        </activity> <!-- LoginActivity -->
         <activity
             android:name=".LoginActivity"
             android:exported="false">
-            <!-- Intent filter and other activity configuration if needed -->
-        </activity>
 
-        <!-- TimesheetActivity -->
+            <!-- Intent filter and other activity configuration if needed -->
+        </activity> <!-- TimesheetActivity -->
         <activity
             android:name=".TimesheetActivity"
             android:exported="false">
-            <!-- Intent filter and other activity configuration if needed -->
-        </activity>
 
-        <!-- CategoryDetailActivity -->
+            <!-- Intent filter and other activity configuration if needed -->
+        </activity> <!-- CategoryDetailActivity -->
         <activity
             android:name=".CategoryDetailActivity"
             android:exported="false">
+
             <!-- Intent filter and other activity configuration if needed -->
         </activity>
-
     </application>
 
 </manifest>
