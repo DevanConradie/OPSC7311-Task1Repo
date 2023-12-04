@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="SpinnerTextStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

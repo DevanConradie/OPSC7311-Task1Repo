@@ -3,17 +3,18 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/retrowave_grid">
 
     <!-- Title -->
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Plan ahead!"
-        android:textSize="18sp"
+        android:text="Plan Ahead!"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         />
@@ -36,6 +37,8 @@
             android:layout_height="wrap_content"
             android:entries="@array/days_of_week"
             android:prompt="@string/select_day_prompt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             />
     </LinearLayout>
 
@@ -57,6 +60,8 @@
             android:layout_height="wrap_content"
             android:entries="@array/minute_intervals"
             android:prompt="@string/select_minute_prompt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             />
     </LinearLayout>
 
@@ -69,5 +74,7 @@
         android:layout_below="@id/minutesSpinnerLayout"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         />
 </RelativeLayout>
