@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.example.opsc7311_task1.BarChartView
-        android:id="@+id/barChart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</RelativeLayout>
-=======
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -35,21 +23,8 @@
         android:layout_marginTop="16dp"
         />
 
-    <!-- Image ImageView -->
-    <ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/your_image_filename"
-        app:layout_constraintTop_toBottomOf="@id/statisticsHeadingTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        />
+
 
     <!-- Other content goes here -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> ad5bcaf7a50a08a55e4e2cf03c850106b1a72a78
