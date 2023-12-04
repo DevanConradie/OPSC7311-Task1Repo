@@ -1,6 +1,8 @@
 // TimesheetActivity.kt in com.example.opsc7311_task1 package
 package com.example.opsc7311_task1
 
+// TimesheetActivity.kt in com.example.opsc7311_task1 package
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -93,5 +95,16 @@ class TimesheetActivity : AppCompatActivity() {
             val intent = Intent(this, ChecklistActivity::class.java)
             startActivity(intent)
         }
+
+        // Initialize the "Statistics" button
+        val statisticsButton: Button = binding.statisticsButton
+
+        // Set click listener for the "Statistics" button
+        statisticsButton.setOnClickListener {
+            // Create an intent to navigate to StatisticsActivity
+            val intent = Intent(this, Statistics::class.java)
+            startActivity(intent)
+        }
     }
 }
+

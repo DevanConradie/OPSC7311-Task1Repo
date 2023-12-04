@@ -7,8 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChecklistActivity"
-    android:background="@drawable/retrowave_grid"
-    >
+    android:background="@drawable/retrowave_grid">
 
     <!-- Category Management Section -->
     <TextView
@@ -47,9 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/categoryTitleTextView"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-
-        />
+        android:layout_marginEnd="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerView"
@@ -86,6 +83,17 @@
         android:layout_height="wrap_content"
         android:text="To Do List"
         app:layout_constraintTop_toBottomOf="@+id/viewEntriesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button for Statistics -->
+    <Button
+        android:id="@+id/statisticsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statistics"
+        app:layout_constraintTop_toBottomOf="@+id/toDoListButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
