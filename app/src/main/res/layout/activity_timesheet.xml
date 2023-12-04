@@ -46,7 +46,8 @@
         app:layout_constraintTop_toBottomOf="@+id/categoryTitleTextView"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerView"
@@ -57,7 +58,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/createTimesheetEntryButton"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        />
 
     <!-- Timesheet Entry Creation Section -->
     <!-- Add UI elements for timesheet entry creation here -->
@@ -74,7 +76,8 @@
         app:layout_constraintTop_toBottomOf="@+id/categoryRecyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        />
 
     <!-- Button for To Do List -->
     <Button
@@ -85,7 +88,8 @@
         app:layout_constraintTop_toBottomOf="@+id/viewEntriesButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        />
 
     <!-- Button for Statistics -->
     <Button
@@ -96,7 +100,8 @@
         app:layout_constraintTop_toBottomOf="@+id/toDoListButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        />
 
     <!-- Button for Profile -->
     <Button
@@ -107,6 +112,19 @@
         app:layout_constraintTop_toBottomOf="@+id/statisticsButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        />
+
+    <!-- Button for Stopwatch -->
+    <Button
+        android:id="@+id/stopwatchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plan Ahead!"
+        app:layout_constraintTop_toBottomOf="@+id/profileButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

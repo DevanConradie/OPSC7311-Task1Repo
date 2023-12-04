@@ -112,6 +112,15 @@ class TimesheetActivity : AppCompatActivity() {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
+
+        // Initialize the "Stopwatch" button
+        val stopwatchButton: Button = binding.stopwatchButton
+
+        // Set click listener for the "Stopwatch" button
+        stopwatchButton.setOnClickListener {
+            // Create an intent to navigate to StopwatchActivity
+            val intent = Intent(this, StopwatchActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
-
