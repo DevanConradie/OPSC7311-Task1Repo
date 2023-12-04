@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".ChecklistActivity">
+    tools:context=".ChecklistActivity"
+    android:background="@drawable/retrowave_grid"
+    >
 
     <!-- Header -->
     <TextView
@@ -17,7 +19,9 @@
         android:text="To Do List"
         android:textSize="24sp"
         android:textAlignment="center"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        />
 
     <!-- Task 1 -->
     <LinearLayout
@@ -30,7 +34,9 @@
             android:id="@+id/checkBox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+
+            />
 
         <EditText
             android:id="@+id/editTextTask1"
@@ -38,7 +44,11 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="Task 1"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColorHint="@android:color/white"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
 
     <!-- Task 2 -->
@@ -60,7 +70,11 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="Task 2"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColorHint="@android:color/white"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
 
     <!-- Task 3 -->
@@ -82,7 +96,11 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="Task 3"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColorHint="@android:color/white"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
 
     <!-- Task 4 -->
@@ -104,7 +122,11 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="Task 4"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColorHint="@android:color/white"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
 
     <!-- Task 5 -->
@@ -126,7 +148,11 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="Task 5"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColorHint="@android:color/white"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
 
 </LinearLayout>

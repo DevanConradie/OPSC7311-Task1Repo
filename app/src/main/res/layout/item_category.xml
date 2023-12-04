@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/retrowave_grid"
+    >
 
     <TextView
         android:id="@+id/categoryNameTextView"
@@ -13,5 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Category Name"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
 </LinearLayout>

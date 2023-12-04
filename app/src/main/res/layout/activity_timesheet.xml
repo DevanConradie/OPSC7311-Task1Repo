@@ -6,7 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChecklistActivity">
+    tools:context=".ChecklistActivity"
+    android:background="@drawable/retrowave_grid"
+    >
 
     <!-- Category Management Section -->
     <TextView
@@ -14,11 +16,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Categories"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        />
 
     <EditText
         android:id="@+id/categoryNameEditText"
@@ -29,7 +33,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/addCategoryButton"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"/>
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        />
 
     <Button
         android:id="@+id/addCategoryButton"
@@ -39,7 +47,9 @@
         app:layout_constraintTop_toBottomOf="@+id/categoryTitleTextView"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginEnd="16dp"
+
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerView"
